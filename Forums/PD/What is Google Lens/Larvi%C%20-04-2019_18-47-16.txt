@@ -1,0 +1,2 @@
+You can point your phone's camera at text, then highlight that text within Google Lens, and copy it to use on your phone.
+When you highlight text in Google Lens, you can also search that text with Google Assistant.

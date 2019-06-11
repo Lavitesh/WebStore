@@ -1,0 +1,1 @@
+It will recognize a hand and suggest the thumbs up emoji, which is a bit of fun, but point it at a drink, and it will try and figure out what it is.
