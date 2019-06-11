@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="WebStore.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/css/core-style.css">
+    <link rel="stylesheet" href="~/css/Roboto.css">
+    <link rel="stylesheet" href="~/css/Montserrat.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="~/css/profilersidebar.css" />
+    <style>
+            .w3-sidebar a {font-family: "Roboto", sans-serif}
+            body, h1, h2, h3, h4, h5, h6, .w3-wide {font-family: "Montserrat", sans-serif;}            
+    </style> 
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="SMAdmin" runat="server"></asp:ScriptManager>
+        <header class="header_area">
+            <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+                <nav class="classy-navbar" id="essenceNav">
+                    <a class="nav-brand" href="AdminPanel.aspx" ><img src="../img/logo2.png" alt="" style="max-width: 150px"></a><!-- Logo.... -->
+                    <div class="classy-navbar-toggler"><!-- Navbar Toggler.... -->
+                        <span class="navbarToggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+
+                    <div class="classy-menu">
+                        <div class="classycloseIcon"><!-- close btn -->
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="AdminPanel.aspx">Home</a>
+                                <li><a href="DeleteApp.aspx">Remove</a></li>
+                                <li><asp:LinkButton ID="Logout" runat="server" OnClick="Logout_Click" CausesValidation="false">Logout</asp:LinkButton>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="text-right container-fluid">
+                    <img src="../img/coinicon.png" style="width:4%;" />
+                    <asp:LinkButton ID="totalmoney" runat="server" OnClick="totalmoney_Click" Font-Bold="true" CausesValidation="false"></asp:LinkButton>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="row profile">
+                            <div class="col-md-2">
+                                <div class="profile-sidebar">
+                                    <div class="profile-userpic text-center">
+					                    <img src="../img/AdminIcon.png" class="img-responsive" alt="">
+				                    </div>
+                                    <div class="profile-usertitle">
+                                        <div class="profile-usertitle-name">           
+                                            <asp:Label ID="UserName" runat="server"></asp:Label><!-- leftbar.... -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <asp:Label ID="Status" runat="server"></asp:Label>
+                                <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+                                <!-- main Content....-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="../js/jquery/jquery-2.2.4.min.js"></script><!-- jquery js -->
+        <script src="../js/popper.min.js"></script><!-- Popper js -->
+        <script src="../js/bootstrap.min.js"></script><!-- Bootstrap js -->
+        <script src="../js/plugins.js"></script><!-- Plugins js -->
+        <script src="../js/classy-nav.min.js"></script><!-- Classy Nav js -->
+        <script src="../js/active.js"></script><!-- Active js -->
+    </form>
+</body>
+</html>
